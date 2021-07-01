@@ -24,6 +24,18 @@ Here the format could be JSON, XML or another kind of text notation format
 
 The format should allow for the definition of different parts of systems - Stocks, Connections and Decisions
 
+#### Stocks
+
+Stocks can be considered variables that can have a set of pre-existing values set, as well as some system values
+
+|Property|Type     |Description|
+|--------|---------|-----------|
+|`id`    |`string` |Internal ID property for the stock, most likely a UUID or custom ID from user|
+|`label` |`string` |The display label for the stock
+|`shape` |`string` |The display shape for the stock - used for programs that will display fixed shapes based on this, UI properties are seperate|
+|`startValue`|`number`|The start value of the stock, the sensible default is 0
+|`maxValue`|`number`|The maximum value the stock can be, the sensible default is 100. The value is ignored if set to 0
+
 ### Meta Components
 
 The format should allow for the definition of Goals, Seperation of system domains, taxonomy and other graph-based values
